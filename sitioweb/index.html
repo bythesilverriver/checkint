@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Checkint Pyme — Smarter commerce. Better business.</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="icon" type="image/png" href="./assets/6229aa0ac58b5dd86a9a65faa4ebca79.png">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+html{scroll-behavior:smooth}
+.ck{font-family:Inter,system-ui,sans-serif;color:#233A38;background:#F7F8FA;-webkit-font-smoothing:antialiased;overflow:hidden}
+.ck *{box-sizing:border-box}
+.ck h1,.ck h2,.ck h3,.ck p,.ck ul{margin:0;padding:0}
+.ck ul{list-style:none}
+.ck a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sec{padding:84px 0}
+.eb{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#56607A;font-weight:700}
+.dk .eb{color:#84D5B5}
+.h2{font-size:clamp(30px,4.2vw,48px);line-height:1.08;font-weight:800;letter-spacing:-.025em;margin-top:12px;max-width:760px}
+.lead{font-size:19px;line-height:1.5;color:#56607A;margin-top:14px;max-width:560px}
+.dk{background:#233A38;color:#F7F8FA}
+.dk .lead{color:#C9D6D3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:14px 28px;border-radius:999px;font:700 16px Inter,system-ui,sans-serif;cursor:pointer;border:0;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px)}
+.b1{background:#84D5B5;color:#233A38}
+.b1:hover{box-shadow:0 12px 28px rgba(132,213,181,.55)}
+.b2{background:#fff;color:#233A38;box-shadow:inset 0 0 0 1.5px #233A38}
+.fl{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.nav{position:sticky;top:12px;z-index:20;padding:0 16px}
+.bar{max-width:1180px;margin:12px auto 0;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid #E3E7EC;border-radius:999px;padding:8px 10px 8px 22px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 8px 30px rgba(35,58,56,.07)}
+.nl{padding:10px 14px;font-size:15px;font-weight:600;border-radius:999px;transition:background .2s;display:inline-block}
+.nl:hover{background:#EAF3EF}
+.dd{position:relative}
+.m{position:absolute;top:100%;left:0;width:290px;padding-top:12px;opacity:0;pointer-events:none;transform:translateY(8px);transition:.25s}
+.dd:hover .m,.dd:focus-within .m{opacity:1;pointer-events:auto;transform:none}
+.mi{background:#fff;border:1px solid #E3E7EC;border-radius:20px;padding:10px;box-shadow:0 18px 40px rgba(35,58,56,.12)}
+.mi a{display:block;padding:11px 14px;border-radius:12px;font-weight:700;font-size:15px}
+.mi a span{display:block;font-weight:500;color:#56607A;font-size:13px;margin-top:2px}
+.mi a:hover{background:#EAF3EF}
+.card{background:#fff;border:1px solid #E3E7EC;border-radius:24px;padding:26px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(35,58,56,.12)}
+.card h3{font-size:19px;font-weight:700;margin-top:16px;line-height:1.25}
+.card p{font-size:15px;line-height:1.45;color:#56607A;margin-top:6px}
+.ic{width:52px;height:52px;border-radius:16px;background:#E3F5EC;display:flex;align-items:center;justify-content:center;flex:none}
+.ic svg,.fo svg{width:26px;height:26px;fill:none;stroke:#233A38;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:40px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:40px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center}
+.mq{overflow:hidden;margin-top:36px}
+.mt{display:flex;gap:12px;width:max-content;animation:mq 38s linear infinite}
+.mq:hover .mt{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ch{background:#fff;border:1px solid #E3E7EC;border-radius:999px;padding:11px 20px;font-size:15px;font-weight:600;white-space:nowrap}
+.dk .ch{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#F7F8FA;font-size:18px;padding:16px 26px}
+.sol{font-size:14px;font-weight:600;color:#233A38;background:#E3F5EC;border-radius:14px;padding:10px 14px;margin-top:14px;line-height:1.4}
+.pr{font-size:12px;letter-spacing:.1em;font-weight:800;color:#56607A}
+.pc h3{font-size:22px;margin-top:8px}
+.pc .v{font-size:15px;font-weight:700;color:#233A38;background:#84D5B5;display:inline-block;padding:5px 12px;border-radius:999px;margin-top:14px}
+.tag{display:inline-block;background:#84D5B5;color:#233A38;font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;letter-spacing:.08em}
+.ck-l{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 18px;margin-top:22px}
+.ck-l li,.bl li{display:flex;gap:10px;font-size:16px;line-height:1.4}
+.ck-l li:before,.bl li:before{content:"\2713";flex:none;width:20px;height:20px;margin-top:1px;border-radius:50%;background:#84D5B5;color:#233A38;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bl{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.bl li{font-size:15px}
+.fn{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.fn div{border-radius:16px;padding:16px 22px;font-weight:700;font-size:17px;color:#233A38}
+.st{font-size:44px;font-weight:800;letter-spacing:-.03em;color:#84D5B5;line-height:1}
+.fq details{background:#fff;border:1px solid #E3E7EC;border-radius:20px;padding:20px 24px;margin-top:12px}
+.fq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary:after{content:"+";font-size:24px;line-height:1}
+.fq details[open] summary:after{content:"\2013"}
+.fq p{margin-top:10px;color:#56607A;font-size:16px;line-height:1.5}
+.fl-a{animation:fa 6s ease-in-out infinite}
+.fl-b{animation:fa 7s ease-in-out infinite reverse}
+@keyframes fa{50%{transform:translateY(-12px)}}
+@supports (animation-timeline:view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}}
+@keyframes rv{from{opacity:0;transform:translateY(46px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.rise{animation:rise .9s ease both}.r2{animation-delay:.15s}.r3{animation-delay:.3s}
+@media (prefers-reduced-motion:reduce){.rise,.rv,.fl-a,.fl-b,.mt{animation:none}.card:hover,.btn:hover{transform:none}}
+</style>
+</helmet>
+<div class="ck">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="8.5" r="1.2"></circle></symbol>
+<symbol id="pct" viewBox="0 0 24 24"><path d="M19 5L5 19"></path><circle cx="7" cy="7" r="2.5"></circle><circle cx="17" cy="17" r="2.5"></circle></symbol>
+<symbol id="mega" viewBox="0 0 24 24"><path d="M3 10v4h4l8 5V5L7 10z M18 9a4 4 0 010 6"></path></symbol>
+<symbol id="lay" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z M3 13l9 5 9-5"></path></symbol>
+<symbol id="sea" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-5-5"></path></symbol>
+<symbol id="bld" viewBox="0 0 24 24"><path d="M14 6a4 4 0 005 5l-9 9a2.1 2.1 0 01-3-3l9-9a4 4 0 00-2-2z"></path></symbol>
+<symbol id="lop" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5l2 2 M20 4v5h-5 M20 12a8 8 0 01-14 5l-2-2 M4 20v-5h5"></path></symbol>
+<symbol id="hrt" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 018-2.5A4.5 4.5 0 0120 9c0 6-8 11-8 11z"></path></symbol>
+<symbol id="gea" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3 M12 19v3 M2 12h3 M19 12h3 M5 5l2 2 M17 17l2 2 M19 5l-2 2 M7 17l-2 2"></path></symbol>
+<symbol id="usr" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0116 0"></path></symbol>
+<symbol id="cht" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"></path></symbol>
+<symbol id="up" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8 M15 7h6v6"></path></symbol>
+<symbol id="cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10h16 M9 3v4 M15 3v4"></path></symbol>
+</defs></svg>
+
+<header class="nav"><div class="bar">
+<a href="#inicio" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.02em"><img src="./assets/6229aa0ac58b5dd86a9a65faa4ebca79.png" alt="" style="height:42px;width:auto;display:block"><span>CHECKint</span></a>
+<nav style="display:flex;align-items:center;flex-wrap:wrap;gap:2px">
+<a class="nl" href="#problema">Desafío omnicanal</a>
+<div class="dd"><a class="nl" href="#soluciones">Soluciones ▾</a><div class="m"><div class="mi"><a href="#soluciones">CRM<span>Conocé y segmentá a tus clientes</span></a><a href="#soluciones">Customer Experience<span>Mejorá cada contacto</span></a><a href="#soluciones">Loyalty<span>Hacé que vuelvan a comprar</span></a><a href="#soluciones">Automation<span>Liberá a tu equipo</span></a></div></div></div>
+<a class="nl" href="#productos">Productos</a><a class="nl" href="#faq">Preguntas</a>
+<a class="btn b1" href="#contacto" style="min-height:44px;padding:10px 22px;font-size:15px;margin-left:6px">Pedir diagnóstico</a>
+</nav></div></header>
+
+<section id="inicio" style="position:relative;padding:56px 0 64px">
+<div style="position:absolute;width:520px;height:520px;border-radius:50%;background:#DDF3E8;right:-120px;top:-60px"></div>
+<div class="wrap g2" style="position:relative;gap:40px">
+<div>
+<p class="eb rise">Para vendedores de marketplace y tiendas propias</p>
+<h1 class="rise r2" style="font-size:clamp(44px,6.4vw,76px);line-height:1;font-weight:800;letter-spacing:-.035em;margin-top:16px">E-commerce inteligente. <span style="background: linear-gradient(transparent 62%, rgb(132, 213, 181) 62%)">Negocios<br>sólidos.</span></h1>
+
+<p class="lead rise r3" style="font-size: 21px; padding-top: 40px">El equipo senior de Digital Commerce que tu negocio online necesita, sin sumar estructura.</p><div class="fl rise r3"><a class="btn b1" href="#contacto">Pedir un diagnóstico</a><a class="btn b2" href="#soluciones">Ver soluciones</a></div>
+</div>
+<svg class="rise r2" viewBox="0 0 520 440" role="img" aria-label="Ilustración de un tablero que muestra el margen por canal, clientes que vuelven y procesos automatizados" style="width:100%;height:auto;overflow:visible">
+<rect x="30" y="50" width="400" height="300" rx="26" fill="#fff" stroke="#E3E7EC" stroke-width="2"></rect>
+<circle cx="58" cy="78" r="6" fill="#84D5B5"></circle><circle cx="78" cy="78" r="6" fill="#D5DCE3"></circle><circle cx="98" cy="78" r="6" fill="#D5DCE3"></circle>
+<circle cx="130" cy="200" r="52" fill="none" stroke="#E3E7EC" stroke-width="18"></circle>
+<circle cx="130" cy="200" r="52" fill="none" stroke="#84D5B5" stroke-width="18" stroke-dasharray="230 327" transform="rotate(-90 130 200)" stroke-linecap="round"></circle>
+<text x="130" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="16" font-weight="800" fill="#233A38">Margen</text>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#56607A"><text x="230" y="148">Mercado Libre</text><text x="230" y="206">Tienda propia</text><text x="230" y="264">WhatsApp</text></g>
+<rect x="230" y="156" width="170" height="14" rx="7" fill="#E3E7EC"></rect><rect x="230" y="156" width="104" height="14" rx="7" fill="#233A38"></rect>
+<rect x="230" y="214" width="170" height="14" rx="7" fill="#E3E7EC"></rect><rect x="230" y="214" width="138" height="14" rx="7" fill="#84D5B5"></rect>
+<rect x="230" y="272" width="170" height="14" rx="7" fill="#E3E7EC"></rect><rect x="230" y="272" width="118" height="14" rx="7" fill="#6B7690"></rect>
+<g class="fl-a"><rect x="318" y="8" width="196" height="84" rx="22" fill="#233A38"></rect><svg x="338" y="30" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#84D5B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#hrt"></use></svg><text x="382" y="44" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#84D5B5">Clientes</text><text x="382" y="68" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#F7F8FA">que vuelven</text></g>
+<g class="fl-b" style="width: 450px; height: 107px"><rect x="0" y="300" height="90" rx="22" fill="#84D5B5" width="240"></rect><svg x="20" y="322" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#gea"></use></svg><text x="70" y="338" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#233A38">Procesos</text><text x="70" y="362" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#233A38">automatizados</text></g>
+<g class="fl-a"><rect x="300" y="318" width="214" height="90" rx="22" fill="#fff" stroke="#E3E7EC" stroke-width="2"></rect><svg x="320" y="340" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#up"></use></svg><text x="370" y="356" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#56607A">Performance</text><text x="370" y="380" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#233A38">Insight</text></g>
+</svg>
+</div>
+<div class="mq"><div class="mt" style="padding-top: 40px; display: flex"><span class="ch">Mercado Libre</span><span class="ch">Tiendanube</span><span class="ch">Tienda propia</span><span class="ch">Redes sociales</span><span class="ch">WhatsApp</span><span class="ch">Email</span><span class="ch">Publicidad online</span><span class="ch">Postventa</span><span class="ch">Mercado Libre</span><span class="ch">Otros marketplaces</span><span class="ch">Tienda propia</span><span class="ch">Redes sociales</span><span class="ch">WhatsApp</span><span class="ch">Email</span><span class="ch">Publicidad online</span><span class="ch">Postventa</span></div></div>
+</section>
+
+<section class="sec dk" style="padding: 72px 0; position: relative"><div class="wrap" style="position: relative">
+<p class="eb">¿Te suena familiar?</p>
+<h2 class="h2" style="color: #f7f8fa; width: 634px; text-align: start; height: 70px; padding-top: 20px">CHECKint es tu aliado.</h2></div>
+<div class="mq" style="margin-top:36px"></div><div class="mt" style="animation-duration: 50s; display: flex"><span class="ch">“Nuestro equipo está sobrecargado”</span><span class="ch">“Estoy invirtiendo mucho en publicidad.”</span><span class="ch">“Mercado Libre vende, pero me come margen.”</span><span class="ch">“Tengo datos, pero nadie los convierte en decisiones.”</span><span class="ch">“Tenemos demasiados procesos manuales.”</span><span class="ch">“Tenemos clientes, pero no conseguimos que vuelvan.”</span><span class="ch">“Necesitamos crecer y no sabemos dónde está la oportunidad.”</span><span class="ch">“Estoy vendiendo, pero no sé cuánto gano.”</span><span class="ch">“Estoy invirtiendo mucho en publicidad.”</span><span class="ch">“Mercado Libre vende, pero me come margen.”</span><span class="ch">“Tengo datos, pero nadie los convierte en decisiones.”</span><span class="ch">“Tenemos demasiados procesos manuales.”</span><span class="ch">“Nuestro equipo está sobrecargado.”</span><span class="ch">“Tenemos clientes, pero no conseguimos que vuelvan.”</span><span class="ch">“Necesitamos crecer y no sabemos dónde está la oportunidad.”</span></div></section>
+
+<section id="problema" class="sec"><div class="wrap">
+<p class="eb rv">El desafío omnicanal</p>
+<h2 class="h2 rv" style="padding-top: 20px">Vender en varios canales se volvió complejo.</h2>
+<div class="g3">
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#pct"></use></svg></div><h3>El marketplace vende, pero se come tu margen</h3><p>Comisiones, envíos y descuentos que no ves.</p><div class="sol">Con CHECKint: sabés cuánto ganás por canal y producto.</div></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#mega"></use></svg></div><h3>Impulsar visibilidad orgánica sin publicidad</h3><p>Optimizar el potencial de tus títulos, descripciones e imágenes.</p><div class="sol">Con CHECKint: invertís a largo plazo.</div></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#tag"></use></svg></div><h3>Cada canal cuenta una historia distinta</h3><p>Precios, fichas y reseñas que no coinciden.</p><div class="sol">Con CHECKint: una operación coherente en todos los canales.</div></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#hrt"></use></svg></div><h3>Clientes que compran una vez y no vuelven</h3><p>Sin seguimiento, cada venta es la última.</p><div class="sol">Con CHECKint: CRM y loyalty para la recompra.</div></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#gea"></use></svg></div><h3>Procesos manuales que frenan al equipo</h3><p>Mucho tiempo en tareas que se pueden automatizar.</p><div class="sol">Con CHECKint: automatizamos lo repetitivo.</div></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#lay"></use></svg></div><h3>Datos de sobra, decisiones de menos</h3><p>Muchos reportes, ninguna prioridad clara.</p><div class="sol">Con CHECKint: un plan de acción con resultados.</div></div>
+</div></div></section>
+
+<section class="sec" style="background:#fff"><div class="wrap g2">
+<svg viewBox="0 0 420 330" role="img" aria-label="Ilustración de una tienda online conectada con CRM, loyalty, experiencia de cliente y automatización" style="width:100%;height:auto">
+<g stroke="#B7E6D0" stroke-width="3" stroke-dasharray="6 7" fill="none"><path d="M120 120L210 165"></path><path d="M300 120L210 165"></path><path d="M120 250L210 165"></path><path d="M300 250L210 165"></path></g>
+<rect x="110" y="105" width="200" height="130" rx="22" fill="#233A38"></rect><rect x="128" y="124" width="164" height="12" rx="6" fill="#84D5B5"></rect>
+<rect x="128" y="148" width="48" height="62" rx="10" fill="#F7F8FA"></rect><rect x="186" y="148" width="48" height="62" rx="10" fill="#84D5B5"></rect><rect x="244" y="148" width="48" height="62" rx="10" fill="#6B7690"></rect>
+<g class="fl-a"><circle cx="90" cy="100" r="42" fill="#DDF3E8"></circle><svg x="68" y="78" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#hrt"></use></svg></g>
+<g class="fl-b"><circle cx="330" cy="100" r="42" fill="#84D5B5"></circle><svg x="308" y="78" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#usr"></use></svg></g>
+<g class="fl-b"><circle cx="90" cy="262" r="42" fill="#84D5B5"></circle><svg x="68" y="240" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#cht"></use></svg></g>
+<g class="fl-a"><circle cx="330" cy="262" r="42" fill="#DDF3E8"></circle><svg x="308" y="240" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#233A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#gea"></use></svg></g>
+</svg>
+<div class="rv">
+<span class="tag">¿ES PARA VOS?</span>
+<h2 class="h2" style="font-size: clamp(28px,3.6vw,40px); padding-top: 30px; padding-bottom: 30px">Hacemos la diferencia cuando tu negocio ya despegó.</h2>
+<ul class="ck-l" style="grid-template-columns:1fr">
+<li>Ya tenés e-commerce propio.</li><li>Vendés en Mercado Libre u otros marketplaces.</li><li>Invertís en marketing.</li><li>Necesitás optimizar tu e-commerce para optimizar tu facturación</li><li>Tenés equipo interno, pero necesitás seniority y capacidad adicional.</li><li>Sentís que el negocio digital se volvió complejo.</li>
+</ul></div></div></section>
+
+<section id="soluciones" class="sec"><div class="wrap">
+<p class="eb rv">Soluciones</p>
+<h2 class="h2 rv" style="padding-top: 20px">Gestión de clientes, experiencia, fidelización y automatización. <br>Todo en un solo equipo.</h2>
+<div class="g4">
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#usr"></use></svg></div><h3 style="padding-bottom: 10px">CRM</h3><ul class="bl"><li>Unificamos tus clientes de todos los canales</li><li>Segmentamos por comportamiento de compra</li><li>Campañas para carritos y recompra</li></ul></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#cht"></use></svg></div><h3 style="padding-bottom: 10px">Customer Experience</h3><ul class="bl"><li>Detectamos fricciones en compra y entrega</li><li>Ordenamos postventa y reclamos</li><li>Cuidamos tu reputación y tus reviews</li></ul></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#hrt"></use></svg></div><h3 style="padding-bottom: 10px">Loyalty</h3><ul class="bl"><li>Programas de beneficios y puntos</li><li>Estrategias para que vuelvan a comprar</li><li>Referidos y comunidad de clientes</li></ul></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#gea"></use></svg></div><h3 style="padding-bottom: 10px">Automation</h3><ul class="bl"><li>WhatsApp y email automáticos</li><li>Menos tareas manuales para tu equipo</li><li>Reportes y alertas con IA</li></ul></div>
+</div></div></section>
+
+<section id="productos" class="sec" style="background:#fff"><div class="wrap">
+<p class="eb rv">Productos</p>
+<h2 class="h2 rv" style="padding-top: 20px">Elegí por dónde empezar.</h2>
+<div class="g3">
+
+<div class="card pc rv"><h3>Commerce Check</h3><p>Una radiografía de tu negocio digital con las prioridades de mayor impacto.</p><span class="v" style="font-weight: 700; font-size: 18px">Conocé tu punto de partida</span></div>
+<div class="card pc rv"><h3>Customer Retention</h3><p>CRM y loyalty para que tus clientes vuelvan y gasten más.</p><span class="v" style="font-weight: 700; font-size: 18px">Retención y recompra</span></div>
+<div class="card pc rv"><h3>Customer Experience</h3><p>Una mejor experiencia en cada canal y en cada contacto.</p><span class="v" style="font-weight: 700; font-size: 18px">Mejorá cada contacto</span></div>
+<div class="card pc rv"><h3>Automation &amp; AI</h3><p>Procesos, atención y reportes automáticos para ganar tiempo.</p><span class="v" style="font-size: 18px; font-weight: 700">Automatizá lo repetitivo</span></div><div class="card pc rv"><h3>Radar mensual</h3><p>Un tablero simple con las acciones del mes y la lectura de tus resultados.</p><span class="v" style="font-size: 18px; font-weight: 700">Seguí tu negocio cada mes</span></div><div class="card pc rv"><h3>Marketplace Profit</h3><p>Margen real por canal y producto, con comisiones, descuentos y logística.</p><span class="v" style="font-weight: 700; font-size: 18px">Descubrí cuánto ganás</span></div>
+
+</div></div></section><section class="sec dk"><div class="wrap">
+<p class="eb">Cómo empezamos</p>
+<h2 class="h2" style="padding-top: 20px">Simple, sin vueltas.</h2>
+<div class="g3">
+<div class="card rv" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)"><p class="st">01</p><h3>Nos contás tu situación</h3><p style="color:#C9D6D3">Una charla para entender tu negocio, tus canales y tus necesidades.</p></div>
+<div class="card rv" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)"><p class="st">02</p><h3>Diagnóstico de tu negocio digital</h3><p style="color:#C9D6D3">Identificamos las oportunidades de mayor impacto.</p></div>
+<div class="card rv" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)"><p class="st">03</p><h3>Plan de acción y ejecución</h3><p style="color:#C9D6D3">Lo hacemos juntos, o lo hacemos por vos.</p></div>
+</div></div></section>
+
+<section id="metodo" class="sec" style="height: 517px"><div class="wrap g2">
+<div>
+<p class="eb rv">SOCIOS EXTERNOS</p>
+<h2 class="h2 rv" style="padding-top: 20px">Tu equipo externo de Digital Commerce, en tres pasos.</h2>
+<p style="margin-top: 26px; font-size: 18px; line-height: 1.4; color: #56607A">“Sé que mi negocio digital tiene potencial, pero no tengo internamente todas los recursos necesarios.”</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 32px">
+<div class="card rv" style="display:flex;gap:18px;align-items:center;padding:20px"><div class="ic"><svg aria-hidden="true"><use href="#sea"></use></svg></div><div><h3 style="margin:0">1. Diagnosticamos</h3><p>Encontramos dónde está el problema.</p></div></div>
+<div class="card rv" style="display:flex;gap:18px;align-items:center;padding:20px"><div class="ic"><svg aria-hidden="true"><use href="#bld"></use></svg></div><div><h3 style="margin:0">2. Transformamos</h3><p>Implementamos las soluciones.</p></div></div>
+<div class="card rv" style="display:flex;gap:18px;align-items:center;padding:20px"><div class="ic"><svg aria-hidden="true"><use href="#lop"></use></svg></div><div><h3 style="margin:0">3. Operamos</h3><p>Somos el equipo que mantiene y acelera el negocio.</p></div></div>
+</div><div class="rv">
+
+<div class="fn"></div>
+
+</div></div></section>
+
+
+
+<section class="sec" style="display: none"><div class="wrap g2">
+<div class="rv"><span class="tag">COMMERCE SCORE</span>
+<h2 class="h2" style="font-size: clamp(28px,3.6vw,42px); padding-top: 20px; padding-bottom: 20px">¿Qué tan sano está tu negocio digital?</h2>
+<p class="lead">Un puntaje claro con tus fortalezas y las prioridades para los próximos 90 días.</p>
+<div class="fl" style="gap:8px"><span class="ch">Precio</span><span class="ch">Contenido</span><span class="ch">Reputación</span><span class="ch">Publicidad</span><span class="ch">Rentabilidad</span><span class="ch">Clientes</span><span class="ch">Automatización</span></div>
+<div class="fl"><a class="btn b1" href="#contacto">Quiero mi Commerce Score</a></div></div>
+<svg class="rv" viewBox="0 0 420 280" role="img" aria-label="Ilustración de un indicador de puntaje" style="width:100%;height:auto">
+<rect x="20" y="10" width="380" height="260" rx="30" fill="#233A38"></rect>
+<path d="M80 200 A130 130 0 0 1 340 200" fill="none" stroke="#3B5653" stroke-width="26" stroke-linecap="round"></path>
+<path d="M80 200 A130 130 0 0 1 290 97" fill="none" stroke="#84D5B5" stroke-width="26" stroke-linecap="round"></path>
+<line x1="210" y1="200" x2="282" y2="118" stroke="#F7F8FA" stroke-width="6" stroke-linecap="round"></line><circle cx="210" cy="200" r="12" fill="#F7F8FA"></circle>
+<text x="210" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#84D5B5">Commerce Score</text>
+</svg></div></section>
+
+<section class="sec" style="background:#fff"><div class="wrap">
+<p class="eb rv">Resultados</p>
+<h2 class="h2 rv" style="padding-top: 20px">Qué cambia cuando trabajamos juntos.</h2>
+<div class="g4">
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#pct"></use></svg></div><h3 style="font-size: 22px">Margen visible</h3></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#hrt"></use></svg></div><h3 style="font-size: 22px">Clientes que vuelven</h3></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#cal"></use></svg></div><h3 style="font-size: 22px">Equipo con tiempo</h3></div>
+<div class="card rv"><div class="ic"><svg aria-hidden="true"><use href="#up"></use></svg></div><h3 style="font-size: 22px">Un plan claro para crecer</h3></div>
+</div></div></section>
+
+<section id="faq" class="sec"><div class="wrap" style="max-width:820px">
+<p class="eb rv">DESPEJÁ TUS DUDAS</p>
+<h2 class="h2 rv" style="padding-top: 20px">Suelen preguntarnos</h2>
+<div class="fq" style="margin-top:28px">
+<details><summary>¿Tengo que cambiar mis herramientas?</summary><p>No. Trabajamos con lo que ya usás y te ayudamos a sacarle más provecho.</p></details>
+<details><summary>¿Reemplazan a mi equipo?</summary><p>No necesariamente, lo potenciamos. Sumamos seniority y capacidad adicional a tu equipo actual.</p></details>
+<details><summary>¿Cómo es la dinámica de trabajo?</summary><p>Empieza con un diagnóstico. Después elegís si seguir con un proyecto puntual o con un acompañamiento mensual.</p></details>
+<details><summary>¿Qué necesito para empezar?</summary><p>Contarnos cómo vendés y compartirnos los datos de tus canales. Nosotros nos encargamos del resto.</p></details>
+</div></div></section>
+
+<section id="contacto" style="padding:0 16px 72px"><div class="dk rv" style="max-width:1180px;margin:0 auto;border-radius:40px;padding:72px 28px;text-align:center;position:relative;overflow:hidden">
+<div style="position:absolute;width:340px;height:340px;border-radius:50%;background:#2E4A47;left:-90px;bottom:-140px"></div><div style="position:absolute;width:240px;height:240px;border-radius:50%;background:#84D5B5;opacity:.18;right:-60px;top:-80px"></div>
+<div style="position:relative"><p class="eb">Empecemos</p>
+<h2 class="h2" style="margin: 12px auto 0; text-align: center; font-size: clamp(32px,5vw,58px); width: 636px; height: 139px">Hablemos de tu negocio digital.</h2>
+<p class="lead" style="margin:16px auto 0">Contanos cómo vendés y empezamos por un diagnóstico.</p>
+<div class="fl" style="justify-content:center"><button class="btn b1" type="button">Pedir un diagnóstico</button></div>
+<div class="fl" style="justify-content: center; margin-top: 18px; display: none"><span class="ch">[TU EMAIL]</span><span class="ch">[TU WHATSAPP]</span><span class="ch">[TU LINKEDIN]</span></div></div>
+</div></section>
+
+<footer style="border-top:1px solid #E3E7EC"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;min-height:88px;font-size:15px;color:#56607A"><span style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:rgb(35, 58, 56)"><img src="./assets/6229aa0ac58b5dd86a9a65faa4ebca79.png" alt="" style="height:34px;width:auto;display:block">CHECKint</span><span>E-commerce inteligente. Negocios sólidos.</span><span>© 2026 CHECKint</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":6400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
